@@ -7,7 +7,7 @@
 #   日期：2016-1-8
 #   语言：Python 2.7
 #   操作：运行 python scan_webshell.py 查看帮助
-#   功能：查杀服务器里面的
+#   功能：查杀服务器里面的Web后门
 #----------------------------------------------
 
 import os
@@ -103,12 +103,11 @@ def Get_Timefiles(_path,_time):
 
 
 if len(sys.argv)!=3 and len(sys.argv)!=2:
-    print u'参数错误:'
+    print u'参数:'
     print u'\t1.按恶意代码查杀: '+"python "+sys.argv[0]+u' 目录名'
     print u'\t2.按修改时间查杀: '+"python "+sys.argv[0]+u' 目录名 修改时间(格式:"2016-01-08 10:00:00")'
 
 try:
-
     if not os.path.exists(sys.argv[1])==True:
         print u'提示：指定的扫描目录不存在---->|^^|'
 
